@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Model AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .input-container {
+            width: 50%;
+            margin: 40px auto;
+            text-align: center;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #3e8e41;
+        }
+        .output {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-container">
+        <h2>Local Model AI</h2>
+        <input type="text" id="input" placeholder="Enter text or question">
+        <button id="button">Ask</button>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        // Initialize the model
+        const model = new LocalModelAI();
+
+        // Get the input and button elements
+        const input = document.getElementById('input');
+        const button = document.getElementById('button');
+        const output = document.getElementById('output');
+
+        // Add an event listener to the button
+        button.addEventListener('click', () => {
+            // Get the user input
+            const userInput = input.value;
+
+            // Call the model's predict function
+            model.predict(userInput)
+                .then((output) => {
+                    // Update the output element
+                    output.textContent = `You said: ${userInput}`;
+                })
+                .catch((error) => {
+                    // Handle any errors
+                    output.textContent = `Error: ${error.message}`;
+                });
+        });
+
+        // Define the LocalModelAI class
+        class LocalModelAI {
+            constructor() {
+                // Initialize the model's parameters
+                this.parameters = {
+                    // Add your model's parameters here
+                    // For example:
+                    weights: [0.1, 0.2, 0.3],
+                    biases: [0.4, 0.5, 0.6],
+                };
+            }
+
+            predict(input) {
+                // Implement the model's predict function here
+                // For example:
+                const output = Math.tan(this.parameters.weights[0] * input + this.parameters.biases[0]);
+                return Promise.resolve(output);
+            }
+        }
+    </script>
+</body>
+</html>
