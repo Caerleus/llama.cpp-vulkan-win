@@ -5,21 +5,7 @@ It includes a fully interactive menu‑driven .bat launcher that transforms the 
 
 The goal is to offer a plug‑and‑play experience: download, place your models, run the launcher, and choose how you want to use your hardware.
 
-llama.cpp-vulkan-win/
-│
-├── scripts/
-│   └── launch_vulkan.bat
-│
-├── models/
-│   └── (place your .gguf models here)
-│
-├── results/
-│   └── (benchmark outputs, logs)
-│
-├── screenshots/
-│   └── (optional images or documentation)
-│
-└── README.md
+![alt text](image-1.png)
 
 🚀 Features of the Launcher Script
 1. Preparation and Relative Paths
