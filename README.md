@@ -7,7 +7,7 @@ The goal is to offer a plug‑and‑play experience: download, place your models
 
 ![alt text](image-1.png)
 
-🚀 Features of the Launcher Script
+## 🚀 Features of the Launcher Script
 1. Preparation and Relative Paths
 The script automatically configures the working environment:
 
@@ -75,7 +75,7 @@ tensor split (if multi‑GPU)
 
 This ensures the user always knows exactly what is running.
 
-📦 Releases
+## 📦 Releases
 Precompiled binaries for Windows (Vulkan build) are available in the Releases section.
 You can download:
 
@@ -87,7 +87,7 @@ optional benchmark results
 
 This allows users to run the project without compiling anything.
 
-🧩 Requirements
+## 🧩 Requirements
 Windows 10/11
 
 AMD GPUs with Vulkan support (RX 580 recommended)
@@ -96,14 +96,14 @@ Latest AMD drivers
 
 .gguf model files placed in the models/ folder
 
-📝 Notes
+## 📝 Notes
 This project is intended for local inference and experimentation.
 
 No proprietary models are included.
 
 Users must provide their own .gguf models.
 
-🤝 Contributions
+## 🤝 Contributions
 Pull requests, improvements, and optimizations are welcome — especially regarding:
 
 Vulkan performance
